@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #07659c;
+  --secondary: #e95e04;
+  --secondary-light: #ef8641;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 1em;
+  display: flex;
+}
+
+body {
+  background: var(--primary);
+}
+
+.caixa_superior {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 1.25em;
+  margin-bottom: 1.5em;
+  align-items: center;
+  gap: 1em;
+}
+
+.caixa_superior h1 {
+  flex: 1;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+.locais-lista {
+  display: grid;
+  gap: 1.5em;
+}
+
+.locais {
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 15%);
+  background-color: white;
+}
+
+.imagem {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.locais p {
+  padding: 1.25em;
+}
+
+.locais a {
+  margin: 0 1.25em 1.25em;
+  display: block;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 10px 1.25em;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+.locais a:hover {
+  background-color: var(--secondary-light);
+  color: white;
+}
+
+.locais-imagem {
+  position: relative;
+}
+
+.locais-imagem h2 {
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  line-height: 1;
+  margin-bottom: 0;
+  font-size: 3.125em;
+  color: white;
+  text-shadow: 0px -2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.rodape {
+  font-weight: 400;
+  padding: 1em;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: white;
+  margin-top: 1.25em;
+}
+
+.formulario {
+  margin-bottom: 1.25em;
+  background-color: white;
+}
+
+.itens_formulario {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.botao_envio {
+  background: var(--secondary);
+  padding: 0.5em 1em;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.botao_envio:hover {
+  background-color: var(--secondary-light);
+  cursor: pointer;
+}
+
+.rodape h2 {
+  color: var(--primary);
+  margin-bottom: 1.25em;
+}
+
+label {
+  color: var(--primary);
+}
+
+label input {
+  display: block;
+  color: var(--primary);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+}
+
+.midias img {
+  width: 30px;
+  height: 30px;
+}
+
+.midias {
+  display: grid;
+}
+
+@media (min-width: 600px) {
+  .locais-lista {
+    grid-template-columns: 1fr 1fr;
+  }
+  .locais a {
+    display: inline-block;
+  }
+  .itens_formulario {
+    flex-direction: row;
+  }
+}
